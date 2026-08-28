@@ -1,0 +1,4 @@
+interface:
+  display_name: "Starryear-Threefold-Memory"
+  short_description: "将旅行照片转译为看见、发生与记住的三重记忆作品"
+  default_prompt: "Use $starryear-threefold-memory to transform my photograph into a Starryear-Threefold-Memory artwork."

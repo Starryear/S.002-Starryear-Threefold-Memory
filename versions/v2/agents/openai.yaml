@@ -1,0 +1,4 @@
+interface:
+  display_name: "Starryear-Threefold-Memory"
+  short_description: "Adaptive photo-memory collage and spatial signal triptychs"
+  default_prompt: "Use $starryear-threefold-memory to translate my photograph into a large fragmented memory collage, locked photographic evidence, and a source-specific spatial signal map."

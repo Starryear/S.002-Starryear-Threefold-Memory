@@ -2,7 +2,7 @@
 name: starryear-threefold-memory
 description: "Transform one user-supplied photograph into a vertical three-panel memory artwork: a large fragmented visual-memory collage above, unchanged photographic evidence in the middle, and a source-specific spatial signal map below. Use for Threefold Memory, What I Saw / What Happened / What Stayed, 三段式记忆, or photo-to-memory triptychs. The method adapts every route, node, fragment, pictogram, palette, and rhythm to the supplied photograph; it must not hard-code a place, object, route, or decorative constellation."
 metadata:
-  version: "2.2.0"
+  version: "2.2.1"
 ---
 
 # Starryear Threefold Memory
@@ -31,7 +31,7 @@ MIDDLE: SOURCE PHOTOGRAPH -> PROPORTIONAL FIT ONLY
 BOTTOM: SOURCE SPATIAL RELATIONSHIPS -> ROUTES / NODES / COLOR FIELDS -> SPATIAL SIGNAL MAP
 ```
 
-Read [references/painterly-cubist-afterimage-grammar.md](references/painterly-cubist-afterimage-grammar.md) before generating. It is authoritative when any bundled legacy example conflicts with this file.
+Read the complete [Version 2 master prompt](versions/v2/MASTER-PROMPT.md) and [visual grammar](versions/v2/references/painterly-cubist-afterimage-grammar.md) before generating. The master prompt is the production contract; the grammar reference resolves conflicts with legacy examples.
 
 ## Non-negotiable output contract
 
@@ -40,7 +40,7 @@ Read [references/painterly-cubist-afterimage-grammar.md](references/painterly-cu
 - Join panels edge-to-edge with no gap, frame, divider, label, title, caption, logo, signature, watermark, or mockup.
 - Preserve the middle photograph as evidence. Do not redraw, relight, recolor, denoise, retouch, remove, or add content.
 - Generate the top and bottom as separate horizontal images. Never generate the full triptych in one image-model call.
-- Assemble with [scripts/compose_triptych.py](scripts/compose_triptych.py) or equivalent deterministic compositing.
+- Assemble with [versions/v2/scripts/compose_triptych.py](versions/v2/scripts/compose_triptych.py) or equivalent deterministic compositing.
 - Every major top or bottom element must point to a visible source fact or a documented transformation of a source relationship.
 
 ## Visual relationship between panels
@@ -319,7 +319,7 @@ If the third attempt still fails a hard gate, stop and report the unresolved fai
 Use the compositor:
 
 ```bash
-python3 scripts/compose_triptych.py \
+python3 versions/v2/scripts/compose_triptych.py \
   --top top-panel.png \
   --photo photo-panel.png \
   --bottom bottom-panel.png \
@@ -337,7 +337,7 @@ Then reopen the final file and verify:
 
 ## Bundled legacy examples
 
-The images in `assets/examples/` are partial method references only:
+The images in `versions/v2/assets/examples/` are partial method references only:
 
 - inspect them only for three-panel rhythm, source palette continuity, and deterministic photographic placement;
 - use them only to understand three-panel rhythm, source continuity, paper texture, and the contrast between memory collage and signal map;
