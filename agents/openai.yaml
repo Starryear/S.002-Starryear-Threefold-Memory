@@ -1,0 +1,4 @@
+interface:
+  display_name: "002 v3.0 · Source-Driven Dual Abstraction"
+  short_description: "从唯一原图生成上层聚合、中层证据、下层扩散的双向抽象三联画"
+  default_prompt: "Use $002-v3-0 to transform my photograph into an aggregating upper abstraction, preserved middle evidence, and dispersing lower abstraction."
